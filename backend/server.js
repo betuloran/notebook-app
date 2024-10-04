@@ -1,9 +1,9 @@
 const express=require('express')
-
+require('dotenv').config()
 const app=express();
 
-app.listen(4000, ()=>{
-    console.log('4000. port dinleniyor');
+app.listen(process.env.PORT, ()=>{
+    console.log(`${process.env.PORT}. port dinleniyor`);
 })
 
 app.get('/',(req,res)=>{ //req, gelen istekleri yakalayan parametre. res, cevap verebilmek için kullanılır 
