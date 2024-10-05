@@ -15,4 +15,4 @@ app.listen(process.env.PORT, ()=>{
     console.log(`${process.env.PORT}. port dinleniyor`);
 })
 
-app.use(noteRoute)
+app.use('/api/notlar',noteRoute)
