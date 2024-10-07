@@ -15,7 +15,7 @@ router.get('/:id',(req,res)=>{
 
 //ekleme işlemi
 router.post('/',(req,res)=>{ 
-    res.json({msg:'yeni not ekle'})
+    console.log(req);
 })
 
 //silme işlemi
