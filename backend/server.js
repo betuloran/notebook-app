@@ -1,18 +1,26 @@
-const express=require('express')
-require('dotenv').config()
-const noteRoute=require('./routes/notes')
+const express = require('express') //Express.js kütüphanesi içeri aktarıldı
+require('dotenv').config() //dotenv kütüphanesini kullanarak .env dosyasındaki ortam değişkenlerini yükler
+const noteRoute = require('./routes/notes')
+const mongoose = require('mongoose')
+const app = express();
 
-const app=express();
-
-app.use((req,res,next)=>{//req, gelen istekleri yakalayan parametre. res, cevap verebilmek için kullanılır 
-console.log(req.path,req.method);
-next();
+app.use((req, res, next) => {//req, gelen istekleri yakalayan parametre. res, cevap verebilmek için kullanılır 
+    console.log(req.path, req.method);
+    next();
 })
 
 app.use(express.json())
 
-app.listen(process.env.PORT, ()=>{
-    console.log(`${process.env.PORT}. port dinleniyor`);
-})
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => {
+        console.log('veritabanı bağlandı');
 
-app.use('/api/notlar',noteRoute)
+        app.listen(process.env.PORT, () => {
+            console.log(`${process.env.PORT}. port dinleniyor`);
+        })
+    })
+    .catch(err=>{
+        console.log(err);
+    })
+
+app.use('/api/notlar', noteRoute)
