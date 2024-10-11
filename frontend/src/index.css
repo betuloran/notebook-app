@@ -2,107 +2,144 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* değişkenlere bağlı renk belirleme */
-:root{
-  --primary:#669bbc;
+:root {
+  --primary: #669bbc;
   --error: #e7195a;
 }
 
 /* sayfanın tamamına ait css özellikleri */
-body{
+body {
   background: #f2e9e4;
   margin: 0;
-  font-family: 'DynaPuff',cursive;
+  font-family: 'DynaPuff', cursive;
 }
 
-header{
+header {
   background: #ddbea9;
 }
 
-.header .container{
+.header .container {
   max-width: 1400px;
-  margin: 0 auto; /*üst alt 0 sağ ve sol auto*/
-  padding: 10px 20px; /*üst alt 10 boşluk sağ sol 20 boşluk*/
+  margin: 0 auto;
+  /*üst alt 0 sağ ve sol auto*/
+  padding: 10px 20px;
+  /*üst alt 10 boşluk sağ sol 20 boşluk*/
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header a{
+header a {
   color: #333;
-  text-decoration: none; /*alt çizgiyi kaldırır*/
+  text-decoration: none;
+  /*alt çizgiyi kaldırır*/
 }
 
-.pages{
+.pages {
   max-width: 1400px;
-  padding: 20px; /*üst alt sağ sol 20 boşluk*/
-  margin: 0 auto; /*üst alt 0 sağ sol auto*/
+  padding: 20px;
+  /*üst alt sağ sol 20 boşluk*/
+  margin: 0 auto;
+  /*üst alt 0 sağ sol auto*/
 }
 
 /*notlar bölümüne ait css özellikleri*/
-.notlar{
+.notlar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /*üç adet eşit genişlikte sütun oluşturur*/
+  grid-template-columns: 1fr 1fr 1fr;
+  /*üç adet eşit genişlikte sütun oluşturur*/
   gap: 10px;
 }
 
-.not-detay{
-background: #fff;
-font-size: 25px;
-border-radius: 4px;
-padding: 20px;
-position: relative;
-box-shadow: 2px 2px 5px rgba(0,0,0,.05);
+.not-detay {
+  background: #fff;
+  font-size: 25px;
+  border-radius: 4px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .05);
 }
 
-.not-detay h4{
+.not-detay h4 {
   margin: 0 0 10px 0;
   font-size: 1.2rem;
   color: var(--primary);
 }
 
-.not-detay p{
+.not-detay p {
   margin: 0;
   font-size: 20px;
   color: #555;
 }
 
-.not-detay span{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    background: #f1f1f1;
-    padding: 6px;
-    border-radius: 50%;
-    color: #333;
+.not-detay span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
 }
 
-.time{
+.time {
   font-size: 0.8rem !important;
   margin-top: 10px !important;
 }
 
 /*notların form yapısının css öz.leri*/
 
-label, input{
+label,
+input {
   display: block;
 }
-form.create{
+
+form.create {
   display: block;
   min-width: 1200px;
 }
 
-.create-group{
+.create-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
-input{
+input {
   padding: 10px;
-  
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'DynaPuff', cursive;
 }
 
+form button {
+  display: block;
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: 'roboto', sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+  font-family: 'DynaPuff', cursive;
+}
 
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
 
-
+.not-form{
+  
+}
