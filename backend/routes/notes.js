@@ -1,7 +1,8 @@
 
 const express = require('express') //route işlemleri için express kullanıyoruz bu yüzden burada espress'i çağırdık 
 const router = express.Router() //express içindeki router'i oluşturduk
-const notModel=require('../models/notModel')
+const notModel = require('../models/notModel')
+const { createNote } = require('../controllers/notController')
 
 router.get('/', (req, res) => { //'/' yoluna yapılan her GET isteği bu route tarafından yakalanır.
     res.json({ msg: 'bütün notlar' })
@@ -15,16 +16,7 @@ router.get('/:id', (req, res) => {
 })
 
 //ekleme işlemi
-router.post('/', async (req, res) => {
-    const { baslik, aciklama } = req.body
-    try {
-const not=await notModel.create({baslik,aciklama})
-res.status(200).json(not)
-    }
-    catch (error) {
-        res.status(400).json({hata:error.message})
-    }
-})
+router.post('/', createNote)
 
 //silme işlemi
 router.delete('/:id', (req, res) => {

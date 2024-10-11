@@ -140,6 +140,40 @@ div.error {
   margin: 20px 0;
 }
 
-.not-form{
-  
+.not-form {
+  margin-bottom: 25px;
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+/*hata alınırsa hatanın gösterilmesi*/
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+nav button {
+  background: #fff;
+  color: var(--error);
+  border: 2px solid var(--error);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/*kullanıcı formu*/
+form.signup form.signin {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
 }
