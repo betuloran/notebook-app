@@ -37,3 +37,72 @@ header a{
   padding: 20px; /*üst alt sağ sol 20 boşluk*/
   margin: 0 auto; /*üst alt 0 sağ sol auto*/
 }
+
+/*notlar bölümüne ait css özellikleri*/
+.notlar{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /*üç adet eşit genişlikte sütun oluşturur*/
+  gap: 10px;
+}
+
+.not-detay{
+background: #fff;
+font-size: 25px;
+border-radius: 4px;
+padding: 20px;
+position: relative;
+box-shadow: 2px 2px 5px rgba(0,0,0,.05);
+}
+
+.not-detay h4{
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.not-detay p{
+  margin: 0;
+  font-size: 20px;
+  color: #555;
+}
+
+.not-detay span{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: #f1f1f1;
+    padding: 6px;
+    border-radius: 50%;
+    color: #333;
+}
+
+.time{
+  font-size: 0.8rem !important;
+  margin-top: 10px !important;
+}
+
+/*notların form yapısının css öz.leri*/
+
+label, input{
+  display: block;
+}
+form.create{
+  display: block;
+  min-width: 1200px;
+}
+
+.create-group{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+input{
+  padding: 10px;
+  
+}
+
+
+
+
