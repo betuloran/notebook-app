@@ -1,12 +1,9 @@
 
 const express = require('express') //route işlemleri için express kullanıyoruz bu yüzden burada espress'i çağırdık 
 const router = express.Router() //express içindeki router'i oluşturduk
-const notModel = require('../models/notModel')
-const { createNote } = require('../controllers/notController')
+const { createNote, bringNote } = require('../controllers/notController')
 
-router.get('/', (req, res) => { //'/' yoluna yapılan her GET isteği bu route tarafından yakalanır.
-    res.json({ msg: 'bütün notlar' })
-})
+router.get('/', bringNote)
 //kök yoluna (yani '/') yapılan bir istek geldiğinde, sunucu bir JSON yanıtı döner: { msg: 'bütün notlar' }.
 // Bu, istemciye bir JSON yanıtı olarak "bütün notlar" mesajını döner.
 
