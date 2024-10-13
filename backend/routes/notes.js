@@ -8,9 +8,9 @@ router.get('/', bringNote)
 // Bu, istemciye bir JSON yanıtı olarak "bütün notlar" mesajını döner.
 
 //listeleme işlemi
-router.get('/:id', (req, res) => {
-    res.json({ msg: `${req.params.id} id'li notu getir` })
-})
+// router.get('/:id', (req, res) => {
+//     res.json({ msg: `${req.params.id} id'li notu getir` })
+// })
 
 //ekleme işlemi
 router.post('/', createNote)

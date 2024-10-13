@@ -17,8 +17,6 @@ const createNote = async (req, res) => {
 //tüm notları getirme işlemi için bir fonksiyon
 
 const bringNote = async (req, res) => {
-    const { baslik, aciklama } = req.body;
-    
         const newNotes =await notModel.find();
         res.status(200).json(newNotes);
      
