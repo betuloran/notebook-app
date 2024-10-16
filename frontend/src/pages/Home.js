@@ -18,8 +18,12 @@ const fetchNotlar=async ()=>{
 fetchNotlar()
 },[])
 return (
-    <div className='home'>
-      <h2>anasayfa</h2>
+    <div className="home">
+       <div className='notlar'>
+{notlar && notlar.map((not)=>{
+  
+})}
+       </div>
     </div>
   )
 
