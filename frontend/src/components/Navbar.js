@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className='container'>
         <Link>
           <h1 to='/'>
-            AOS NOT DEFTERİ
+            NOT DEFTERİM
           </h1>
         </Link>
       </div>
