@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
 import NoteDetails from '../components/NoteDetails'
+import NoteForm from '../components/NoteForm';
 
 export default function Home() {
 
@@ -23,6 +24,9 @@ export default function Home() {
 
   return (
     <div className="home">
+      <div className='not-form'>
+        <NoteForm />
+      </div>
       <div className='notlar'>
         {notlar && notlar.map((not) => (
           <NoteDetails key={not._id} not={not} />
