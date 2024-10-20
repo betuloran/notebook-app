@@ -15,7 +15,7 @@ const handleSubmit=async (e)=>{
       method:'POST',
       body:JSON.stringify(not),
       headers:{
-        'Content-Type':'application/json'
+        'Content-Type': 'application/json'
       }
     })
     const json=await response.json()
